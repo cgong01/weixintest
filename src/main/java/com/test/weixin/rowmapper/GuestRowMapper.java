@@ -15,7 +15,7 @@ public class GuestRowMapper implements RowMapper<Guest> {
         guest.setRecordId(resultSet.getInt("record_id"));
         guest.setName(resultSet.getString("friend_name"));
         guest.setJoinWedding(resultSet.getString("join_wedding"));
-        guest.setNumOfFriend(resultSet.getInt("num_of_friend"));
+        guest.setNumOfFriend(resultSet.getString("num_of_friend"));
         guest.setSideOfFriend(resultSet.getString("side_of_friend"));
 
         return guest;

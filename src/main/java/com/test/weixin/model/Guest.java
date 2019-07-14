@@ -9,7 +9,7 @@ public class Guest {
 
     private String joinWedding;
 
-    private int numOfFriend;
+    private String numOfFriend;
 
     private String sideOfFriend;
 
@@ -37,11 +37,11 @@ public class Guest {
         this.joinWedding = joinWedding;
     }
 
-    public int getNumOfFriend() {
+    public String getNumOfFriend() {
         return numOfFriend;
     }
 
-    public void setNumOfFriend(int numOfFriend) {
+    public void setNumOfFriend(String numOfFriend) {
         this.numOfFriend = numOfFriend;
     }
 
@@ -53,13 +53,14 @@ public class Guest {
         this.sideOfFriend = sideOfFriend;
     }
 
+
     @Override
     public String toString() {
         return "Guest{" +
                 "recordId=" + recordId +
                 ", name='" + name + '\'' +
                 ", joinWedding='" + joinWedding + '\'' +
-                ", numOfFriend=" + numOfFriend +
+                ", numOfFriend='" + numOfFriend + '\'' +
                 ", sideOfFriend='" + sideOfFriend + '\'' +
                 '}';
     }
