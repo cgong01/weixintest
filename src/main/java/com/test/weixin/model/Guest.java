@@ -3,6 +3,16 @@ package com.test.weixin.model;
 
 public class Guest {
 
+    public Guest() {
+    }
+
+    public Guest(String name, String joinWedding, String numOfFriend, String sideOfFriend) {
+        this.name = name;
+        this.joinWedding = joinWedding;
+        this.numOfFriend = numOfFriend;
+        this.sideOfFriend = sideOfFriend;
+    }
+
     private int recordId;
 
     private String name;

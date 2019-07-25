@@ -16,9 +16,9 @@ import java.util.Map;
 
 @RestController
 @SpringBootApplication
-public class ControllerText {
+public class WexinController {
 
-    private Map<String, Object> guestMap = new HashMap<>();
+    private Map<String, String> guestMap = new HashMap<>();
 
     @Autowired
     private GuestDao guestDao;
@@ -61,13 +61,20 @@ public class ControllerText {
         return map;
     }
 
+    @GetMapping("getCurrentguest")
+    public Guest getGuest() {
+        Guest currentGuest = new Guest(guestMap.get("guestname"), guestMap.get("joinans"), guestMap.get("sideans"), guestMap.get("guestnum"));
+        return currentGuest;
+    }
 
     @GetMapping("getGuestinsert")
-    public boolean insertData(Boolean guestInsert) {
+    public Integer insertData(Integer guestInsert) {
         guestInsert = guestDao.insertInfo(guestMap);
         guestMap.clear();
         return guestInsert;
     }
+
+
 
 
 //    @RequestMapping("getUser")
